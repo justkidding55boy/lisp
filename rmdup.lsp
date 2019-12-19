@@ -1,0 +1,5 @@
+(defun rmdup(x)
+  (cond ((null x) nil)
+        ((mem (first x) (rest x))
+         (cons (first x) (rmdup (rm (first x) (rest x))))
+         (t (cons (first x) (rmdup (rest x)))))))
